@@ -1,0 +1,19 @@
+{
+  "dataServiceGeneratorVersion": "0.12.7",
+  "appInfo": {
+    "name": "Habit tracking",
+    "description": "",
+    "version": "6qwfrp17",
+    "id": "cl32sazk722356901s6ngbfy163",
+    "url": "https://app.amplication.com/cl32sazk722356901s6ngbfy163",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "cl32sazk722356901s6ngbfy163",
+      "authProvider": "Jwt"
+    }
+  }
+}
