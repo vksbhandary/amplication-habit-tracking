@@ -7,7 +7,7 @@ export type TodoUpdateInput = {
   description?: string | null;
   end?: Date | null;
   goal?: GoalWhereUniqueInput | null;
-  repeateBasis?:
+  repeatBasis?:
     | "Daily"
     | "Weekly"
     | "BiWeekly"
@@ -18,6 +18,6 @@ export type TodoUpdateInput = {
     | null;
   repeated?: boolean | null;
   start?: Date | null;
-  status?: "Completed" | "InPogress" | "Backlog" | null;
+  status?: "Completed" | "InProgress" | "Backlog" | null;
   title?: string | null;
 };

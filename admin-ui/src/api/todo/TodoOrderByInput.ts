@@ -7,7 +7,7 @@ export type TodoOrderByInput = {
   end?: SortOrder;
   goalId?: SortOrder;
   id?: SortOrder;
-  repeateBasis?: SortOrder;
+  repeatBasis?: SortOrder;
   repeated?: SortOrder;
   start?: SortOrder;
   status?: SortOrder;

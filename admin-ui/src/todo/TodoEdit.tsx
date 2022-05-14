@@ -36,8 +36,8 @@ export const TodoEdit = (props: EditProps): React.ReactElement => {
           <SelectInput optionText={GoalTitle} />
         </ReferenceInput>
         <SelectInput
-          source="repeateBasis"
-          label="repeateBasis"
+          source="repeatBasis"
+          label="repeatBasis"
           choices={[
             { label: "Daily", value: "Daily" },
             { label: "Weekly", value: "Weekly" },
@@ -58,7 +58,7 @@ export const TodoEdit = (props: EditProps): React.ReactElement => {
           label="status"
           choices={[
             { label: "Completed", value: "Completed" },
-            { label: "In pogress", value: "InPogress" },
+            { label: "In progress", value: "InProgress" },
             { label: "Backlog", value: "Backlog" },
           ]}
           optionText="label"

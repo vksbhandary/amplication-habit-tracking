@@ -23,7 +23,7 @@ import {
 } from "class-validator";
 import { Type } from "class-transformer";
 import { Goal } from "../../goal/base/Goal";
-import { EnumTodoRepeateBasis } from "./EnumTodoRepeateBasis";
+import { EnumTodoRepeatBasis } from "./EnumTodoRepeatBasis";
 import { EnumTodoStatus } from "./EnumTodoStatus";
 @ObjectType()
 class Todo {
@@ -96,14 +96,14 @@ class Todo {
 
   @ApiProperty({
     required: false,
-    enum: EnumTodoRepeateBasis,
+    enum: EnumTodoRepeatBasis,
   })
-  @IsEnum(EnumTodoRepeateBasis)
+  @IsEnum(EnumTodoRepeatBasis)
   @IsOptional()
-  @Field(() => EnumTodoRepeateBasis, {
+  @Field(() => EnumTodoRepeatBasis, {
     nullable: true,
   })
-  repeateBasis?:
+  repeatBasis?:
     | "Daily"
     | "Weekly"
     | "BiWeekly"
@@ -144,7 +144,7 @@ class Todo {
   @Field(() => EnumTodoStatus, {
     nullable: true,
   })
-  status?: "Completed" | "InPogress" | "Backlog" | null;
+  status?: "Completed" | "InProgress" | "Backlog" | null;
 
   @ApiProperty({
     required: false,

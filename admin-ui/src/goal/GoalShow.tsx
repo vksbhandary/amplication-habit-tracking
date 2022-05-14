@@ -37,7 +37,7 @@ export const GoalShow = (props: ShowProps): React.ReactElement => {
               <TextField source={GOAL_TITLE_FIELD} />
             </ReferenceField>
             <TextField label="ID" source="id" />
-            <TextField label="repeateBasis" source="repeateBasis" />
+            <TextField label="repeatBasis" source="repeatBasis" />
             <BooleanField label="repeated" source="repeated" />
             <TextField label="start" source="start" />
             <TextField label="status" source="status" />

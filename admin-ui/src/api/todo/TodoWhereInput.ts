@@ -13,7 +13,7 @@ export type TodoWhereInput = {
   end?: DateTimeNullableFilter;
   goal?: GoalWhereUniqueInput;
   id?: StringFilter;
-  repeateBasis?:
+  repeatBasis?:
     | "Daily"
     | "Weekly"
     | "BiWeekly"
@@ -23,6 +23,6 @@ export type TodoWhereInput = {
     | "LastWeekdayOfMonth";
   repeated?: BooleanNullableFilter;
   start?: DateTimeNullableFilter;
-  status?: "Completed" | "InPogress" | "Backlog";
+  status?: "Completed" | "InProgress" | "Backlog";
   title?: StringNullableFilter;
 };
