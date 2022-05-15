@@ -1,5 +1,5 @@
 export enum EnumTodoStatus {
   Completed = "Completed",
-  InPogress = "InPogress",
+  InProgress = "InProgress",
   Backlog = "Backlog",
 }

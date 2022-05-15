@@ -31,20 +31,20 @@ model Goal {
 }
 
 model Todo {
-  actions      Action[]
-  allotedTime  Int?
-  createdAt    DateTime              @default(now())
-  description  String?
-  end          DateTime?
-  goal         Goal?                 @relation(fields: [goalId], references: [id])
-  goalId       String?
-  id           String                @id @default(cuid())
-  repeateBasis EnumTodoRepeateBasis?
-  repeated     Boolean?
-  start        DateTime?
-  status       EnumTodoStatus?
-  title        String?
-  updatedAt    DateTime              @updatedAt
+  actions     Action[]
+  allotedTime Int?
+  createdAt   DateTime             @default(now())
+  description String?
+  end         DateTime?
+  goal        Goal?                @relation(fields: [goalId], references: [id])
+  goalId      String?
+  id          String               @id @default(cuid())
+  repeatBasis EnumTodoRepeatBasis?
+  repeated    Boolean?
+  start       DateTime?
+  status      EnumTodoStatus?
+  title       String?
+  updatedAt   DateTime             @updatedAt
 }
 
 model Action {
@@ -58,7 +58,7 @@ model Action {
   updatedAt DateTime          @updatedAt
 }
 
-enum EnumTodoRepeateBasis {
+enum EnumTodoRepeatBasis {
   Daily
   Weekly
   BiWeekly
@@ -70,7 +70,7 @@ enum EnumTodoRepeateBasis {
 
 enum EnumTodoStatus {
   Completed
-  InPogress
+  InProgress
   Backlog
 }
 

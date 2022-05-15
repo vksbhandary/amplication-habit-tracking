@@ -11,12 +11,16 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { registerEnumType } from "@nestjs/graphql";
 
-export enum EnumTodoStatus {
-  Completed = "Completed",
-  InProgress = "InProgress",
-  Backlog = "Backlog",
+export enum EnumTodoRepeatBasis {
+  Daily = "Daily",
+  Weekly = "Weekly",
+  BiWeekly = "BiWeekly",
+  Monthly = "Monthly",
+  BiMonthly = "BiMonthly",
+  FirstWeekdayOfMonth = "FirstWeekdayOfMonth",
+  LastWeekdayOfMonth = "LastWeekdayOfMonth",
 }
 
-registerEnumType(EnumTodoStatus, {
-  name: "EnumTodoStatus",
+registerEnumType(EnumTodoRepeatBasis, {
+  name: "EnumTodoRepeatBasis",
 });

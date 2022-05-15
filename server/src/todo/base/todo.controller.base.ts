@@ -71,7 +71,7 @@ export class TodoControllerBase {
         },
 
         id: true,
-        repeateBasis: true,
+        repeatBasis: true,
         repeated: true,
         start: true,
         status: true,
@@ -108,7 +108,7 @@ export class TodoControllerBase {
         },
 
         id: true,
-        repeateBasis: true,
+        repeatBasis: true,
         repeated: true,
         start: true,
         status: true,
@@ -146,7 +146,7 @@ export class TodoControllerBase {
         },
 
         id: true,
-        repeateBasis: true,
+        repeatBasis: true,
         repeated: true,
         start: true,
         status: true,
@@ -201,7 +201,7 @@ export class TodoControllerBase {
           },
 
           id: true,
-          repeateBasis: true,
+          repeatBasis: true,
           repeated: true,
           start: true,
           status: true,
@@ -247,7 +247,7 @@ export class TodoControllerBase {
           },
 
           id: true,
-          repeateBasis: true,
+          repeatBasis: true,
           repeated: true,
           start: true,
           status: true,

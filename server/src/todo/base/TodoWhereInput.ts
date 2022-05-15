@@ -19,7 +19,7 @@ import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { GoalWhereUniqueInput } from "../../goal/base/GoalWhereUniqueInput";
 import { StringFilter } from "../../util/StringFilter";
-import { EnumTodoRepeateBasis } from "./EnumTodoRepeateBasis";
+import { EnumTodoRepeatBasis } from "./EnumTodoRepeatBasis";
 import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
 import { EnumTodoStatus } from "./EnumTodoStatus";
 @InputType()
@@ -94,14 +94,14 @@ class TodoWhereInput {
 
   @ApiProperty({
     required: false,
-    enum: EnumTodoRepeateBasis,
+    enum: EnumTodoRepeatBasis,
   })
-  @IsEnum(EnumTodoRepeateBasis)
+  @IsEnum(EnumTodoRepeatBasis)
   @IsOptional()
-  @Field(() => EnumTodoRepeateBasis, {
+  @Field(() => EnumTodoRepeatBasis, {
     nullable: true,
   })
-  repeateBasis?:
+  repeatBasis?:
     | "Daily"
     | "Weekly"
     | "BiWeekly"
@@ -141,7 +141,7 @@ class TodoWhereInput {
   @Field(() => EnumTodoStatus, {
     nullable: true,
   })
-  status?: "Completed" | "InPogress" | "Backlog";
+  status?: "Completed" | "InProgress" | "Backlog";
 
   @ApiProperty({
     required: false,

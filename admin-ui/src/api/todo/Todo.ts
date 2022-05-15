@@ -9,7 +9,7 @@ export type Todo = {
   end: Date | null;
   goal?: Goal | null;
   id: string;
-  repeateBasis?:
+  repeatBasis?:
     | "Daily"
     | "Weekly"
     | "BiWeekly"
@@ -20,7 +20,7 @@ export type Todo = {
     | null;
   repeated: boolean | null;
   start: Date | null;
-  status?: "Completed" | "InPogress" | "Backlog" | null;
+  status?: "Completed" | "InProgress" | "Backlog" | null;
   title: string | null;
   updatedAt: Date;
 };

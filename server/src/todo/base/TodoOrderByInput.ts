@@ -79,7 +79,7 @@ class TodoOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  repeateBasis?: SortOrder;
+  repeatBasis?: SortOrder;
 
   @ApiProperty({
     required: false,
