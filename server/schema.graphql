@@ -1,0 +1,414 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Action {
+  createdAt: DateTime!
+  end: DateTime
+  id: String!
+  start: DateTime
+  status: EnumActionStatus
+  todo: Todo
+  updatedAt: DateTime!
+}
+
+input ActionCreateInput {
+  end: DateTime
+  start: DateTime
+  status: EnumActionStatus
+  todo: TodoWhereUniqueInput
+}
+
+input ActionCreateNestedManyWithoutTodosInput {
+  connect: [ActionWhereUniqueInput!]
+}
+
+input ActionListRelationFilter {
+  every: ActionWhereInput
+  none: ActionWhereInput
+  some: ActionWhereInput
+}
+
+input ActionOrderByInput {
+  createdAt: SortOrder
+  end: SortOrder
+  id: SortOrder
+  start: SortOrder
+  status: SortOrder
+  todoId: SortOrder
+  updatedAt: SortOrder
+}
+
+input ActionUpdateInput {
+  end: DateTime
+  start: DateTime
+  status: EnumActionStatus
+  todo: TodoWhereUniqueInput
+}
+
+input ActionUpdateManyWithoutTodosInput {
+  connect: [ActionWhereUniqueInput!]
+  disconnect: [ActionWhereUniqueInput!]
+  set: [ActionWhereUniqueInput!]
+}
+
+input ActionWhereInput {
+  end: DateTimeNullableFilter
+  id: StringFilter
+  start: DateTimeNullableFilter
+  status: EnumActionStatus
+  todo: TodoWhereUniqueInput
+}
+
+input ActionWhereUniqueInput {
+  id: String!
+}
+
+input BooleanNullableFilter {
+  equals: Boolean
+  not: Boolean
+}
+
+input Credentials {
+  password: String!
+  username: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input DateTimeNullableFilter {
+  equals: DateTime
+  gt: DateTime
+  gte: DateTime
+  in: [DateTime!]
+  lt: DateTime
+  lte: DateTime
+  not: DateTime
+  notIn: [DateTime!]
+}
+
+enum EnumActionStatus {
+  Completed
+  Skipped
+}
+
+enum EnumTodoRepeatBasis {
+  BiMonthly
+  BiWeekly
+  Daily
+  FirstWeekdayOfMonth
+  LastWeekdayOfMonth
+  Monthly
+  Weekly
+}
+
+enum EnumTodoStatus {
+  Backlog
+  Completed
+  InProgress
+}
+
+type Goal {
+  createdAt: DateTime!
+  description: String
+  id: String!
+  title: String!
+  todos(orderBy: [TodoOrderByInput!], skip: Float, take: Float, where: TodoWhereInput): [Todo!]!
+  updatedAt: DateTime!
+  user: User
+}
+
+input GoalCreateInput {
+  description: String
+  title: String!
+  todos: TodoCreateNestedManyWithoutGoalsInput
+  user: UserWhereUniqueInput
+}
+
+input GoalCreateNestedManyWithoutUsersInput {
+  connect: [GoalWhereUniqueInput!]
+}
+
+input GoalListRelationFilter {
+  every: GoalWhereInput
+  none: GoalWhereInput
+  some: GoalWhereInput
+}
+
+input GoalOrderByInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  title: SortOrder
+  updatedAt: SortOrder
+  userId: SortOrder
+}
+
+input GoalUpdateInput {
+  description: String
+  title: String
+  todos: TodoUpdateManyWithoutGoalsInput
+  user: UserWhereUniqueInput
+}
+
+input GoalUpdateManyWithoutUsersInput {
+  connect: [GoalWhereUniqueInput!]
+  disconnect: [GoalWhereUniqueInput!]
+  set: [GoalWhereUniqueInput!]
+}
+
+input GoalWhereInput {
+  description: StringNullableFilter
+  id: StringFilter
+  title: StringFilter
+  todos: TodoListRelationFilter
+  user: UserWhereUniqueInput
+}
+
+input GoalWhereUniqueInput {
+  id: String!
+}
+
+input IntNullableFilter {
+  equals: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  lt: Int
+  lte: Int
+  not: Int
+  notIn: [Int!]
+}
+
+type MetaQueryPayload {
+  count: Float!
+}
+
+type Mutation {
+  createAction(data: ActionCreateInput!): Action!
+  createGoal(data: GoalCreateInput!): Goal!
+  createTodo(data: TodoCreateInput!): Todo!
+  createUser(data: UserCreateInput!): User!
+  deleteAction(where: ActionWhereUniqueInput!): Action!
+  deleteGoal(where: GoalWhereUniqueInput!): Goal!
+  deleteTodo(where: TodoWhereUniqueInput!): Todo!
+  deleteUser(where: UserWhereUniqueInput!): User!
+  login(credentials: Credentials!): UserInfo!
+  updateAction(data: ActionUpdateInput!, where: ActionWhereUniqueInput!): Action!
+  updateGoal(data: GoalUpdateInput!, where: GoalWhereUniqueInput!): Goal!
+  updateTodo(data: TodoUpdateInput!, where: TodoWhereUniqueInput!): Todo!
+  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User!
+}
+
+type Query {
+  _actionsMeta(orderBy: [ActionOrderByInput!], skip: Float, take: Float, where: ActionWhereInput): MetaQueryPayload!
+  _goalsMeta(orderBy: [GoalOrderByInput!], skip: Float, take: Float, where: GoalWhereInput): MetaQueryPayload!
+  _todosMeta(orderBy: [TodoOrderByInput!], skip: Float, take: Float, where: TodoWhereInput): MetaQueryPayload!
+  _usersMeta(orderBy: [UserOrderByInput!], skip: Float, take: Float, where: UserWhereInput): MetaQueryPayload!
+  action(where: ActionWhereUniqueInput!): Action
+  actions(orderBy: [ActionOrderByInput!], skip: Float, take: Float, where: ActionWhereInput): [Action!]!
+  goal(where: GoalWhereUniqueInput!): Goal
+  goals(orderBy: [GoalOrderByInput!], skip: Float, take: Float, where: GoalWhereInput): [Goal!]!
+  todo(where: TodoWhereUniqueInput!): Todo
+  todos(orderBy: [TodoOrderByInput!], skip: Float, take: Float, where: TodoWhereInput): [Todo!]!
+  user(where: UserWhereUniqueInput!): User
+  userInfo: UserInfo!
+  users(orderBy: [UserOrderByInput!], skip: Float, take: Float, where: UserWhereInput): [User!]!
+}
+
+enum QueryMode {
+  Default
+  Insensitive
+}
+
+enum SortOrder {
+  Asc
+  Desc
+}
+
+input StringFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  mode: QueryMode
+  not: String
+  notIn: [String!]
+  startsWith: String
+}
+
+input StringNullableFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  mode: QueryMode
+  not: String
+  notIn: [String!]
+  startsWith: String
+}
+
+type Todo {
+  actions(orderBy: [ActionOrderByInput!], skip: Float, take: Float, where: ActionWhereInput): [Action!]!
+  allotedTime: Float
+  createdAt: DateTime!
+  description: String
+  end: DateTime
+  goal: Goal
+  id: String!
+  repeatBasis: EnumTodoRepeatBasis
+  repeated: Boolean
+  repetitions: Float
+  start: DateTime
+  status: EnumTodoStatus
+  title: String
+  updatedAt: DateTime!
+}
+
+input TodoCreateInput {
+  actions: ActionCreateNestedManyWithoutTodosInput
+  allotedTime: Float
+  description: String
+  end: DateTime
+  goal: GoalWhereUniqueInput
+  repeatBasis: EnumTodoRepeatBasis
+  repeated: Boolean
+  repetitions: Float
+  start: DateTime
+  status: EnumTodoStatus
+  title: String
+}
+
+input TodoCreateNestedManyWithoutGoalsInput {
+  connect: [TodoWhereUniqueInput!]
+}
+
+input TodoListRelationFilter {
+  every: TodoWhereInput
+  none: TodoWhereInput
+  some: TodoWhereInput
+}
+
+input TodoOrderByInput {
+  allotedTime: SortOrder
+  createdAt: SortOrder
+  description: SortOrder
+  end: SortOrder
+  goalId: SortOrder
+  id: SortOrder
+  repeatBasis: SortOrder
+  repeated: SortOrder
+  repetitions: SortOrder
+  start: SortOrder
+  status: SortOrder
+  title: SortOrder
+  updatedAt: SortOrder
+}
+
+input TodoUpdateInput {
+  actions: ActionUpdateManyWithoutTodosInput
+  allotedTime: Float
+  description: String
+  end: DateTime
+  goal: GoalWhereUniqueInput
+  repeatBasis: EnumTodoRepeatBasis
+  repeated: Boolean
+  repetitions: Float
+  start: DateTime
+  status: EnumTodoStatus
+  title: String
+}
+
+input TodoUpdateManyWithoutGoalsInput {
+  connect: [TodoWhereUniqueInput!]
+  disconnect: [TodoWhereUniqueInput!]
+  set: [TodoWhereUniqueInput!]
+}
+
+input TodoWhereInput {
+  actions: ActionListRelationFilter
+  allotedTime: IntNullableFilter
+  description: StringNullableFilter
+  end: DateTimeNullableFilter
+  goal: GoalWhereUniqueInput
+  id: StringFilter
+  repeatBasis: EnumTodoRepeatBasis
+  repeated: BooleanNullableFilter
+  repetitions: IntNullableFilter
+  start: DateTimeNullableFilter
+  status: EnumTodoStatus
+  title: StringNullableFilter
+}
+
+input TodoWhereUniqueInput {
+  id: String!
+}
+
+type User {
+  createdAt: DateTime!
+  firstName: String
+  goals(orderBy: [GoalOrderByInput!], skip: Float, take: Float, where: GoalWhereInput): [Goal!]!
+  id: String!
+  lastName: String
+  roles: [String!]!
+  updatedAt: DateTime!
+  username: String!
+}
+
+input UserCreateInput {
+  firstName: String
+  goals: GoalCreateNestedManyWithoutUsersInput
+  lastName: String
+  password: String!
+  roles: [String!]!
+  username: String!
+}
+
+type UserInfo {
+  accessToken: String
+  roles: [String!]!
+  username: String!
+}
+
+input UserOrderByInput {
+  createdAt: SortOrder
+  firstName: SortOrder
+  id: SortOrder
+  lastName: SortOrder
+  password: SortOrder
+  roles: SortOrder
+  updatedAt: SortOrder
+  username: SortOrder
+}
+
+input UserUpdateInput {
+  firstName: String
+  goals: GoalUpdateManyWithoutUsersInput
+  lastName: String
+  password: String
+  roles: [String!]
+  username: String
+}
+
+input UserWhereInput {
+  firstName: StringNullableFilter
+  goals: GoalListRelationFilter
+  id: StringFilter
+  lastName: StringNullableFilter
+  username: StringFilter
+}
+
+input UserWhereUniqueInput {
+  id: String!
+}
