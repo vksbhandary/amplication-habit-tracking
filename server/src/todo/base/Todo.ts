@@ -126,6 +126,17 @@ class Todo {
 
   @ApiProperty({
     required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  repetitions!: number | null;
+
+  @ApiProperty({
+    required: false,
   })
   @IsDate()
   @Type(() => Date)

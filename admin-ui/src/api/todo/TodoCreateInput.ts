@@ -17,6 +17,7 @@ export type TodoCreateInput = {
     | "LastWeekdayOfMonth"
     | null;
   repeated?: boolean | null;
+  repetitions?: number | null;
   start?: Date | null;
   status?: "Completed" | "InProgress" | "Backlog" | null;
   title?: string | null;

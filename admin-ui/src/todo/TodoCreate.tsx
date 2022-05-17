@@ -52,6 +52,7 @@ export const TodoCreate = (props: CreateProps): React.ReactElement => {
           optionValue="value"
         />
         <BooleanInput label="repeated" source="repeated" />
+        <NumberInput step={1} label="repetitions" source="repetitions" />
         <DateTimeInput label="start" source="start" />
         <SelectInput
           source="status"

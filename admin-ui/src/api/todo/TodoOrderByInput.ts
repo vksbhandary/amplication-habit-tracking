@@ -9,6 +9,7 @@ export type TodoOrderByInput = {
   id?: SortOrder;
   repeatBasis?: SortOrder;
   repeated?: SortOrder;
+  repetitions?: SortOrder;
   start?: SortOrder;
   status?: SortOrder;
   title?: SortOrder;

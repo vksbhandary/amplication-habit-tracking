@@ -260,6 +260,7 @@ export class GoalControllerBase {
         id: true,
         repeatBasis: true,
         repeated: true,
+        repetitions: true,
         start: true,
         status: true,
         title: true,

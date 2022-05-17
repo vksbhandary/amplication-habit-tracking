@@ -97,6 +97,15 @@ class TodoOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  repetitions?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   start?: SortOrder;
 
   @ApiProperty({

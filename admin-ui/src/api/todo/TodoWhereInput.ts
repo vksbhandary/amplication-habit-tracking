@@ -22,6 +22,7 @@ export type TodoWhereInput = {
     | "FirstWeekdayOfMonth"
     | "LastWeekdayOfMonth";
   repeated?: BooleanNullableFilter;
+  repetitions?: IntNullableFilter;
   start?: DateTimeNullableFilter;
   status?: "Completed" | "InProgress" | "Backlog";
   title?: StringNullableFilter;
