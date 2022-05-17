@@ -41,6 +41,7 @@ model Todo {
   id          String               @id @default(cuid())
   repeatBasis EnumTodoRepeatBasis?
   repeated    Boolean?
+  repetitions Int?
   start       DateTime?
   status      EnumTodoStatus?
   title       String?
