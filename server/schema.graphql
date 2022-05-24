@@ -6,17 +6,21 @@ type Action {
   createdAt: DateTime!
   end: DateTime
   id: String!
+  minutes: Float
   start: DateTime
   status: EnumActionStatus
   todo: Todo
   updatedAt: DateTime!
+  xp: Float
 }
 
 input ActionCreateInput {
   end: DateTime
+  minutes: Float
   start: DateTime
   status: EnumActionStatus
   todo: TodoWhereUniqueInput
+  xp: Float
 }
 
 input ActionCreateNestedManyWithoutTodosInput {
@@ -33,17 +37,21 @@ input ActionOrderByInput {
   createdAt: SortOrder
   end: SortOrder
   id: SortOrder
+  minutes: SortOrder
   start: SortOrder
   status: SortOrder
   todoId: SortOrder
   updatedAt: SortOrder
+  xp: SortOrder
 }
 
 input ActionUpdateInput {
   end: DateTime
+  minutes: Float
   start: DateTime
   status: EnumActionStatus
   todo: TodoWhereUniqueInput
+  xp: Float
 }
 
 input ActionUpdateManyWithoutTodosInput {
@@ -55,9 +63,11 @@ input ActionUpdateManyWithoutTodosInput {
 input ActionWhereInput {
   end: DateTimeNullableFilter
   id: StringFilter
+  minutes: IntNullableFilter
   start: DateTimeNullableFilter
   status: EnumActionStatus
   todo: TodoWhereUniqueInput
+  xp: IntNullableFilter
 }
 
 input ActionWhereUniqueInput {
