@@ -59,6 +59,7 @@ export class ActionControllerBase {
         createdAt: true,
         end: true,
         id: true,
+        minutes: true,
         start: true,
         status: true,
 
@@ -69,6 +70,7 @@ export class ActionControllerBase {
         },
 
         updatedAt: true,
+        xp: true,
       },
     });
   }
@@ -91,6 +93,7 @@ export class ActionControllerBase {
         createdAt: true,
         end: true,
         id: true,
+        minutes: true,
         start: true,
         status: true,
 
@@ -101,6 +104,7 @@ export class ActionControllerBase {
         },
 
         updatedAt: true,
+        xp: true,
       },
     });
   }
@@ -124,6 +128,7 @@ export class ActionControllerBase {
         createdAt: true,
         end: true,
         id: true,
+        minutes: true,
         start: true,
         status: true,
 
@@ -134,6 +139,7 @@ export class ActionControllerBase {
         },
 
         updatedAt: true,
+        xp: true,
       },
     });
     if (result === null) {
@@ -174,6 +180,7 @@ export class ActionControllerBase {
           createdAt: true,
           end: true,
           id: true,
+          minutes: true,
           start: true,
           status: true,
 
@@ -184,6 +191,7 @@ export class ActionControllerBase {
           },
 
           updatedAt: true,
+          xp: true,
         },
       });
     } catch (error) {
@@ -215,6 +223,7 @@ export class ActionControllerBase {
           createdAt: true,
           end: true,
           id: true,
+          minutes: true,
           start: true,
           status: true,
 
@@ -225,6 +234,7 @@ export class ActionControllerBase {
           },
 
           updatedAt: true,
+          xp: true,
         },
       });
     } catch (error) {

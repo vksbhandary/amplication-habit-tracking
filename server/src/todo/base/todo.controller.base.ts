@@ -289,6 +289,7 @@ export class TodoControllerBase {
         createdAt: true,
         end: true,
         id: true,
+        minutes: true,
         start: true,
         status: true,
 
@@ -299,6 +300,7 @@ export class TodoControllerBase {
         },
 
         updatedAt: true,
+        xp: true,
       },
     });
     if (results === null) {

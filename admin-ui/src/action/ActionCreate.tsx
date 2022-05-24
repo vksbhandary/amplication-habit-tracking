@@ -5,6 +5,7 @@ import {
   SimpleForm,
   CreateProps,
   DateTimeInput,
+  NumberInput,
   SelectInput,
   ReferenceInput,
 } from "react-admin";
@@ -16,6 +17,7 @@ export const ActionCreate = (props: CreateProps): React.ReactElement => {
     <Create {...props}>
       <SimpleForm>
         <DateTimeInput label="end" source="end" />
+        <NumberInput step={1} label="minutes" source="minutes" />
         <DateTimeInput label="start" source="start" />
         <SelectInput
           source="status"
@@ -31,6 +33,7 @@ export const ActionCreate = (props: CreateProps): React.ReactElement => {
         <ReferenceInput source="todo.id" reference="Todo" label="todo">
           <SelectInput optionText={TodoTitle} />
         </ReferenceInput>
+        <NumberInput step={1} label="xp" source="xp" />
       </SimpleForm>
     </Create>
   );

@@ -52,6 +52,15 @@ class ActionOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  minutes?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   start?: SortOrder;
 
   @ApiProperty({
@@ -80,6 +89,15 @@ class ActionOrderByInput {
     nullable: true,
   })
   updatedAt?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  xp?: SortOrder;
 }
 
 export { ActionOrderByInput };

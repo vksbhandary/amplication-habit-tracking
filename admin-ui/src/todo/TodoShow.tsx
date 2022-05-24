@@ -39,12 +39,14 @@ export const TodoShow = (props: ShowProps): React.ReactElement => {
             <DateField source="createdAt" label="Created At" />
             <TextField label="end" source="end" />
             <TextField label="ID" source="id" />
+            <TextField label="minutes" source="minutes" />
             <TextField label="start" source="start" />
             <TextField label="status" source="status" />
             <ReferenceField label="todo" source="todo.id" reference="Todo">
               <TextField source={TODO_TITLE_FIELD} />
             </ReferenceField>
             <DateField source="updatedAt" label="Updated At" />
+            <TextField label="xp" source="xp" />
           </Datagrid>
         </ReferenceManyField>
       </SimpleShowLayout>

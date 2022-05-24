@@ -15,6 +15,7 @@ import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { Type } from "class-transformer";
 import { IsOptional, IsEnum, ValidateNested } from "class-validator";
 import { StringFilter } from "../../util/StringFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 import { EnumActionStatus } from "./EnumActionStatus";
 import { TodoWhereUniqueInput } from "../../todo/base/TodoWhereUniqueInput";
 @InputType()
@@ -40,6 +41,17 @@ class ActionWhereInput {
     nullable: true,
   })
   id?: StringFilter;
+
+  @ApiProperty({
+    required: false,
+    type: IntNullableFilter,
+  })
+  @Type(() => IntNullableFilter)
+  @IsOptional()
+  @Field(() => IntNullableFilter, {
+    nullable: true,
+  })
+  minutes?: IntNullableFilter;
 
   @ApiProperty({
     required: false,
@@ -74,5 +86,16 @@ class ActionWhereInput {
     nullable: true,
   })
   todo?: TodoWhereUniqueInput;
+
+  @ApiProperty({
+    required: false,
+    type: IntNullableFilter,
+  })
+  @Type(() => IntNullableFilter)
+  @IsOptional()
+  @Field(() => IntNullableFilter, {
+    nullable: true,
+  })
+  xp?: IntNullableFilter;
 }
 export { ActionWhereInput };
