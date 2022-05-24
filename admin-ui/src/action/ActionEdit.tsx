@@ -1,12 +1,15 @@
 import * as React from "react";
+
 import {
   Edit,
   SimpleForm,
   EditProps,
   DateTimeInput,
+  NumberInput,
   SelectInput,
   ReferenceInput,
 } from "react-admin";
+
 import { TodoTitle } from "../todo/TodoTitle";
 
 export const ActionEdit = (props: EditProps): React.ReactElement => {
@@ -14,6 +17,7 @@ export const ActionEdit = (props: EditProps): React.ReactElement => {
     <Edit {...props}>
       <SimpleForm>
         <DateTimeInput label="end" source="end" />
+        <NumberInput step={1} label="minutes" source="minutes" />
         <DateTimeInput label="start" source="start" />
         <SelectInput
           source="status"
@@ -29,6 +33,7 @@ export const ActionEdit = (props: EditProps): React.ReactElement => {
         <ReferenceInput source="todo.id" reference="Todo" label="todo">
           <SelectInput optionText={TodoTitle} />
         </ReferenceInput>
+        <NumberInput step={1} label="xp" source="xp" />
       </SimpleForm>
     </Edit>
   );

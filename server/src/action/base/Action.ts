@@ -15,6 +15,7 @@ import {
   IsDate,
   IsOptional,
   IsString,
+  IsInt,
   IsEnum,
   ValidateNested,
 } from "class-validator";
@@ -49,6 +50,17 @@ class Action {
   @IsString()
   @Field(() => String)
   id!: string;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  minutes!: number | null;
 
   @ApiProperty({
     required: false,
@@ -88,5 +100,16 @@ class Action {
   @Type(() => Date)
   @Field(() => Date)
   updatedAt!: Date;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  xp!: number | null;
 }
 export { Action };

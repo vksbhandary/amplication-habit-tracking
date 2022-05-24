@@ -11,7 +11,13 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsDate, IsOptional, IsEnum, ValidateNested } from "class-validator";
+import {
+  IsDate,
+  IsOptional,
+  IsInt,
+  IsEnum,
+  ValidateNested,
+} from "class-validator";
 import { Type } from "class-transformer";
 import { EnumActionStatus } from "./EnumActionStatus";
 import { TodoWhereUniqueInput } from "../../todo/base/TodoWhereUniqueInput";
@@ -27,6 +33,17 @@ class ActionUpdateInput {
     nullable: true,
   })
   end?: Date | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  minutes?: number | null;
 
   @ApiProperty({
     required: false,
@@ -61,5 +78,16 @@ class ActionUpdateInput {
     nullable: true,
   })
   todo?: TodoWhereUniqueInput | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  xp?: number | null;
 }
 export { ActionUpdateInput };

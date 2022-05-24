@@ -14,31 +14,39 @@ const CREATE_INPUT = {
   createdAt: new Date(),
   end: new Date(),
   id: "exampleId",
+  minutes: 42,
   start: new Date(),
   updatedAt: new Date(),
+  xp: 42,
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
   end: new Date(),
   id: "exampleId",
+  minutes: 42,
   start: new Date(),
   updatedAt: new Date(),
+  xp: 42,
 };
 const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
     end: new Date(),
     id: "exampleId",
+    minutes: 42,
     start: new Date(),
     updatedAt: new Date(),
+    xp: 42,
   },
 ];
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
   end: new Date(),
   id: "exampleId",
+  minutes: 42,
   start: new Date(),
   updatedAt: new Date(),
+  xp: 42,
 };
 
 const service = {

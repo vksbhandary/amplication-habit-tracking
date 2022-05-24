@@ -52,11 +52,13 @@ model Action {
   createdAt DateTime          @default(now())
   end       DateTime?
   id        String            @id @default(cuid())
+  minutes   Int?
   start     DateTime?
   status    EnumActionStatus?
   todo      Todo?             @relation(fields: [todoId], references: [id])
   todoId    String?
   updatedAt DateTime          @updatedAt
+  xp        Int?
 }
 
 enum EnumTodoRepeatBasis {
