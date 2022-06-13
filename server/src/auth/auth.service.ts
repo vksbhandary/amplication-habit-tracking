@@ -23,8 +23,8 @@ export class AuthService {
       where: { username },
     });
     if (user && (await this.passwordService.compare(password, user.password))) {
-      const { roles } = user;
-      return { username, roles };
+      const { roles, id } = user;
+      return { username, roles, id };
     }
     return null;
   }
@@ -41,7 +41,7 @@ export class AuthService {
     const accessToken = await this.tokenService.createToken(username, password);
     return {
       accessToken,
-      ...user,
+      ...user
     };
   }
 }

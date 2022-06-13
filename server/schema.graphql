@@ -387,6 +387,7 @@ input UserCreateInput {
 
 type UserInfo {
   accessToken: String
+  id: String!
   roles: [String!]!
   username: String!
 }
