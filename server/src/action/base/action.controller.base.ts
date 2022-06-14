@@ -22,7 +22,7 @@ import { ActionService } from "../action.service";
 import { AclValidateRequestInterceptor } from "../../interceptors/aclValidateRequest.interceptor";
 import { AclFilterResponseInterceptor } from "../../interceptors/aclFilterResponse.interceptor";
 import { ActionCreateInput } from "./ActionCreateInput";
-import { ActionWhereInput } from "./ActionWhereInput";
+// import { ActionWhereInput } from "./ActionWhereInput";
 import { ActionWhereUniqueInput } from "./ActionWhereUniqueInput";
 import { ActionFindManyArgs } from "./ActionFindManyArgs";
 import { ActionUpdateInput } from "./ActionUpdateInput";

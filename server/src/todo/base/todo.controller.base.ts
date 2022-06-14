@@ -22,7 +22,7 @@ import { TodoService } from "../todo.service";
 import { AclValidateRequestInterceptor } from "../../interceptors/aclValidateRequest.interceptor";
 import { AclFilterResponseInterceptor } from "../../interceptors/aclFilterResponse.interceptor";
 import { TodoCreateInput } from "./TodoCreateInput";
-import { TodoWhereInput } from "./TodoWhereInput";
+// import { TodoWhereInput } from "./TodoWhereInput";
 import { TodoWhereUniqueInput } from "./TodoWhereUniqueInput";
 import { TodoFindManyArgs } from "./TodoFindManyArgs";
 import { TodoUpdateInput } from "./TodoUpdateInput";

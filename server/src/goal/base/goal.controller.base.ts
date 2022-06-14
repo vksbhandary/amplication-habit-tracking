@@ -22,7 +22,7 @@ import { GoalService } from "../goal.service";
 import { AclValidateRequestInterceptor } from "../../interceptors/aclValidateRequest.interceptor";
 import { AclFilterResponseInterceptor } from "../../interceptors/aclFilterResponse.interceptor";
 import { GoalCreateInput } from "./GoalCreateInput";
-import { GoalWhereInput } from "./GoalWhereInput";
+// import { GoalWhereInput } from "./GoalWhereInput";
 import { GoalWhereUniqueInput } from "./GoalWhereUniqueInput";
 import { GoalFindManyArgs } from "./GoalFindManyArgs";
 import { GoalUpdateInput } from "./GoalUpdateInput";
